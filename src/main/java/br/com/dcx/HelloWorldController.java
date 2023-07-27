@@ -12,6 +12,7 @@ public class HelloWorldController {
     private static final String mensagem = "Olá %s!";
     private static final AtomicLong counter = new AtomicLong();
 
+    
     @RequestMapping("/helloworld")
     public HelloWorld helloWorld(@RequestParam(value = "name", defaultValue = "World") String name){
         return new HelloWorld(counter.incrementAndGet(), String.format(mensagem, name));
